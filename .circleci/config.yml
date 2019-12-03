@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/node:7.10
+      - image: circleci/node:10.16.3
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -35,6 +35,10 @@ jobs:
 
       # run tests!
       #- run: yarn test
-      - add_ssh_keys:
-          fingerprints:
-            - "9e:aa:c3:3c:a4:e7:ad:65:9a:08:d3:55:83:ef:37:20"
+      - run:
+          name: Gatsby Build
+          command: npm run build
+      - run:
+          name: Firebase Deploy
+          command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN"
+
