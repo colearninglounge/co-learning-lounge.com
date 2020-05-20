@@ -7,7 +7,6 @@ import { Container } from "reactstrap";
 
 function IndexHeader() {
   let pageHeader = React.createRef();
-
   React.useEffect(() => {
     if (window.innerWidth > 991) {
       const updateScroll = () => {
@@ -28,26 +27,24 @@ function IndexHeader() {
         <div
           className="page-header-image"
           style={{
-            backgroundImage: "url(" + require("../../assets/img/header.jpg") + ")"
+            backgroundImage: "url(" + require("../../assets/img/events/pyConf_Yogesh_2.jpg") + ")"
           }}
           ref={pageHeader}
         ></div>
         <Container>
           <div className="content-center brand">
-            <img
-              alt="..."
-              className="n-logo"
-              // src={require("logo-here")}
-            ></img>
-            <h1 className="h1-seo">Co-learning Lounge</h1>
-            {/* <h3>A beautiful Bootstrap 4 UI kit. Yours free.</h3> */}
+            <div className="carousel-caption mainText d-md-block">
+              <h1 className="h1-seo anim-typewriter">Learn → Practice → Create → Collaborate → Contribute</h1>
+              <h1 className="h1-seo with-out-anim-typewriter">Learn → Practice → Create → Collaborate → Contribute</h1>
+              <br></br>
+              <h6 className="category">Designed and developed by{" the commmunity"}</h6>
+            </div>
           </div>
-          <h6 className="category category-absolute">
-            Designed and coded by{" the commmunity"}
-            
-            .
-          </h6>
+          {/* <h6 className="category category-absolute">
+            Designed and developed by{" the commmunity"}.
+          </h6> */}
         </Container>
+        <div className="separator separator-primary" id="vision"></div>
       </div>
     </>
   );

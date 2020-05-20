@@ -2,18 +2,25 @@ import React from "react";
 // reactstrap components
 import {
   Collapse,
-
   Navbar,
   NavItem,
   NavLink,
   Nav,
-  Container,
-  UncontrolledTooltip
+  Container
 } from "reactstrap";
+
+import { Link, scroller } from 'react-scroll';
 
 function IndexNavbar() {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [collapseOpen, setCollapseOpen] = React.useState(false);
+
+  scroller.scrollTo('scroll-to-element', {
+    duration: 800,
+    delay: 0,
+    smooth: 'easeInOutQuart'
+  });
+
   React.useEffect(() => {
     const updateNavbarColor = () => {
       if (
@@ -33,6 +40,9 @@ function IndexNavbar() {
       window.removeEventListener("scroll", updateNavbarColor);
     };
   });
+
+  const isNotHomepage = (window.location.pathname !== '/')
+
   return (
     <>
       {collapseOpen ? (
@@ -44,15 +54,16 @@ function IndexNavbar() {
           }}
         />
       ) : null}
-      <Navbar className={"fixed-top " + navbarColor} expand="lg" color="info">
+      <Navbar className={"fixed-top " + (isNotHomepage ? '' : navbarColor)} expand="lg" color="info">
         <Container>
           <div className="navbar-translate">
-            <div
-              id="navbar-brand"
-            >
-              Co-learning Lounge
+            <div id="navbar-brand">
+              <a href="/">
+              <img alt="..." className="n-logo" height="75px" src={require("../../assets/img/logo/blue_horizontal.png")}></img>
+              {/*Co-learning Lounge*/}
+              </a>
             </div>
-            
+
             <button
               className="navbar-toggler navbar-toggler"
               onClick={() => {
@@ -70,10 +81,73 @@ function IndexNavbar() {
           <Collapse
             className="justify-content-end"
             isOpen={collapseOpen}
-            navbar
-          >
+            navbar>
             <Nav navbar>
-              
+              <NavItem>
+                {isNotHomepage ?
+                  <NavLink href="../#vision"> Vision </NavLink> :
+                  <NavLink href="#vision">
+                    <Link activeClass="active" to="vision" spy={true} smooth={true} duration={800}>Vision</Link>
+                  </NavLink>
+                }       
+              </NavItem>
+
+              <NavItem>
+              {isNotHomepage ?
+                  <NavLink href="../#mission"> Mission </NavLink> :
+              <NavLink
+                href="#mission">
+                <Link activeClass="active" to="mission" spy={true} smooth={true} duration={800}>Mission</Link>
+              </NavLink>
+              }
+              </NavItem>
+
+              <NavItem>
+              {isNotHomepage ?
+                  <NavLink href="../#what-do-we-offer"> What do we offer </NavLink> :
+                <NavLink
+                  href="#what-do-we-offer">
+                  <Link activeClass="active" to="what-do-we-offer" spy={true} smooth={true} duration={800}>What do we offer</Link>
+                </NavLink>
+              }
+              </NavItem>
+
+              <NavItem>
+              {isNotHomepage ?
+                  <NavLink href="../#events"> Events </NavLink> :
+                <NavLink
+                  href="#events">
+                  <Link activeClass="active" to="events" spy={true} smooth={true} duration={800}>Events</Link>
+                </NavLink>
+              }
+              </NavItem>
+
+              <NavItem>
+              {isNotHomepage ?
+                  <NavLink href="../#what-do-you-get"> What do you get </NavLink> :
+                <NavLink
+                  href="#what-do-you-get">
+                  <Link activeClass="active" to="what-do-you-get" spy={true} smooth={true} duration={800}>What do you get</Link>
+                </NavLink>
+              }
+              </NavItem>
+
+              <NavItem>
+              {isNotHomepage ?
+                  <NavLink href="../#our-reach"> Our Reach </NavLink> :
+                <NavLink
+                  href="#our-reach">
+                  <Link activeClass="active" to="our-reach" spy={true} smooth={true} duration={800}>Our Reach</Link>
+                </NavLink>
+              }
+              </NavItem>
+
+              <NavItem>
+              <NavLink
+                href="/community-talent-hunt">
+                Community
+              </NavLink>
+              </NavItem>
               {/* <UncontrolledDropdown nav>
                 <DropdownToggle
                   caret
@@ -99,46 +173,6 @@ function IndexNavbar() {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown> */}
-              
-              <NavItem>
-                <NavLink
-                  // href=""
-                  target="_blank"
-                  id="twitter-tooltip"
-                >
-                  <i className="fab fa-twitter"></i>
-                  <p className="d-lg-none d-xl-none">Twitter</p>
-                </NavLink>
-                <UncontrolledTooltip target="#twitter-tooltip">
-                  Follow us on Twitter
-                </UncontrolledTooltip>
-              </NavItem>
-              <NavItem>
-                <NavLink
-                  // href=""
-                  target="_blank"
-                  id="facebook-tooltip"
-                >
-                  <i className="fab fa-facebook-square"></i>
-                  <p className="d-lg-none d-xl-none">Facebook</p>
-                </NavLink>
-                <UncontrolledTooltip target="#facebook-tooltip">
-                  Like us on Facebook
-                </UncontrolledTooltip>
-              </NavItem>
-              <NavItem>
-                <NavLink
-                  // href=""
-                  target="_blank"
-                  id="instagram-tooltip"
-                >
-                  <i className="fab fa-instagram"></i>
-                  <p className="d-lg-none d-xl-none">Instagram</p>
-                </NavLink>
-                <UncontrolledTooltip target="#instagram-tooltip">
-                  Follow us on Instagram
-                </UncontrolledTooltip>
-              </NavItem>
             </Nav>
           </Collapse>
         </Container>

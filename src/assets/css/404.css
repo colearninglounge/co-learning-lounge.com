@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+
+.page_404 {
+  padding:40px 0;
+  background:#fff;
+  font-family: 'Pangolin', cursive;
+}
+
+.page_404  img {
+  width:100%;
+}
+
+.page_404  .row {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+.four_zero_four_bg {
+  margin-top: 70px;
+  background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.four_zero_four_bg h1 {
+  font-size:80px;
+}
+
+.four_zero_four_bg h3 {
+	font-size:80px;
+}
+
+.link_404 {			 
+	color: #fff!important;
+  padding: 10px 20px;
+  background: #39ac31;
+  margin: 20px 0;
+  display: inline-block;
+  border-radius: 25px;;
+  text-decoration: none !important;
+}
+.content_box_404 {
+  margin-top:-50px;
+}
+
+.main_404 {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}

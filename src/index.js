@@ -17,23 +17,28 @@
 */
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import * as serviceWorker from './serviceWorker';
 
 // styles for this kit
 import "./assets/css/bootstrap.min.css";
 import "./assets/scss/now-ui-kit.scss";
+import "./assets/css/custom.css";
 // pages for this kit
 import Index from "./views/Index.js";
+import Typeform from "./views/type-form";
+import NotFound from "./views/NotFound";
 
 ReactDOM.render(
-  <BrowserRouter>
-    <Switch>
+  <BrowserRouter >
       <Switch>
-        <Route path="/index" render={props => <Index {...props} />} />   
-        <Redirect to="/index" />
-        <Redirect from="/" to="/index" />
+        <Route exact path="/" component={Index} />
+        {/* <Route exact path="/" component={ Index } /> */}
+        <Route exact path="/community-talent-hunt" component={ Typeform } />
+        <Route component={NotFound} />
       </Switch>
-    </Switch>
   </BrowserRouter>,
   document.getElementById("root")
 );
+
+serviceWorker.register();

@@ -1,0 +1,194 @@
+.description {
+    color: rgb(109, 112, 139);
+}
+
+.card-collapse.card-header {
+    background-color: white;
+    text-align: left;
+}
+
+.item > a {
+    color: #2c2c2c;
+    font-size: 1.125rem;
+    line-height: 1.556;
+    font-weight: bold;
+}
+
+.item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    margin: 1.5rem 0px;
+}
+
+h2 {
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+ul>li {
+    text-align: left;
+}
+
+.card-title {
+    font-weight: 600;
+}
+
+.img_square {
+    border-radius: 5px;
+}
+
+.grey-background {
+    background-color: #F4F6F6 !important;
+}
+
+.emphText {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.footer ul li a {
+    font-size: 1.5em;
+}
+
+.footer ul li a p {
+    display: none;
+}
+
+.navbar .navbar-nav .nav-link:not(.btn) {
+    font-size: 1em;
+}
+.our-reach-card {
+    width: 15em;
+    background-color: #fff;
+    --primary-color: #5a17ee;
+    --secondary-color: white;
+    /* color: rgb(109, 112, 139); */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 9px 22px 0px;
+    text-align: center;
+    border-radius: 0.95rem;
+    overflow: hidden;
+    /* padding: 3rem 2rem; */
+    margin: 0px;
+}
+.social-media-icons {
+    width: 4em !important;
+    height: 4em !important;
+}
+.carousel-caption h5 {
+    font-size: 1em;
+}
+.carousel-caption.mainText {
+    position: relative;
+    right: 0px;
+    left: 0px;
+    padding: 20px;
+}
+
+.d-md-block {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.anim-typewriter {
+    font-size: 1.5em;
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange;
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em;
+    /* Adjust as needed */
+    animation:
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+.corousel-single-img{
+    display: block;
+}
+.corousel-single-img .carousel-caption {
+    left: 10%;
+    right: 10%;
+}
+.btn-round.bg-info:hover, .btn-round.bg-info:focus {
+    background-color: #2CA8FF !important;
+}
+.with-out-anim-typewriter {
+    display: none !important;
+}
+.footer {
+    padding: 0px;
+}
+.copyright {
+    padding-top: 15px;
+}
+.contact-us{
+    padding: 40px;
+    text-align: center;
+}
+
+.MuiIconButton-root:hover, .MuiIconButton-root:focus, .MuiIconButton-root:active{
+    color: rgba(0, 0, 0, 0.54);
+}
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 90%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: orange;
+    }
+}
+
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+    .footer ul {
+        text-align: center;
+    }
+    .with-out-anim-typewriter {
+        display: block !important;
+        font-size: 0.9em;
+        margin: 0 auto;
+        letter-spacing: .15em;
+    }
+    .anim-typewriter {
+        display: none;
+    }
+    .nav {
+        display: block;
+    }
+    .footer {
+        padding: 24px 0;
+    }
+    .carousel-caption {
+        padding: 0px;
+        padding-top: 5px;
+    }
+    .carousel-caption h5 {
+        font-size: 0.8em;
+    }
+    .ml-auto, .mx-auto {
+        margin-top: 10px !important;
+    }
+}

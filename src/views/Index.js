@@ -1,18 +1,16 @@
 import React from "react";
 
-// reactstrap components
-// import {
-// } from "reactstrap";
-
 // core components
 import IndexNavbar from "../components/Navbars/IndexNavbar.js";
 import IndexHeader from "../components/Headers/IndexHeader.js";
 import DarkFooter from "../components/Footers/DarkFooter.js";
 
-// sections for this page
-
 import Carousel from "./index-sections/Carousel.js";
-import Examples from "./index-sections/Examples.js";
+import Introduction from "./index-sections/Introduction.js";
+import WhatYouGet from "./index-sections/WhatYouGet.js";
+import OurReach from "./index-sections/OurReach.js";
+import CommunityContribution from "./index-sections/CommunityContribution.js";
+import SocialMedia from "./index-sections/SocialMedia.js";
 
 function Index() {
   React.useEffect(() => {
@@ -26,6 +24,7 @@ function Index() {
       document.body.classList.remove("sidebar-collapse");
     };
   });
+  
   return (
     <>
       <IndexNavbar />
@@ -33,9 +32,12 @@ function Index() {
         <IndexHeader />
         <div className="main">
           
-          <Examples />
+          <Introduction />
           <Carousel />
-          
+          <WhatYouGet />
+          <OurReach />
+          <SocialMedia />
+          <CommunityContribution />
         </div>
         <DarkFooter />
       </div>

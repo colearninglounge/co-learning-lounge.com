@@ -13,19 +13,44 @@ import {
 //todo need to come from cms
 const items = [
   {
-    src: require("../../assets/img/bg1.jpg"),
-    altText: "Nature, United States",
-    caption: "Nature, United States"
+    src: require("../../assets/img/events/pyConf_Yogesh_2.jpg"),
+    altText: "Yogesh Kothiya, RASA based Chatbot Building at PyConf - Hyderabad",
+    caption: "Yogesh Kothiya, RASA based Chatbot Building at PyConf - Hyderabad"
+  }, 
+  {
+    src: require("../../assets/img/events/venkata_durga_object_detection_YOLO.jpg"),
+    altText: "Venkata Durga Rao Gambali, Object detection using YOLO - Hyderabad",
+    caption: "Venkata Durga Rao Gambali, Object detection using YOLO - Hyderabad"
   },
   {
-    src: require("../../assets/img/bg3.jpg"),
-    altText: "Somewhere Beyond, United States",
-    caption: "Somewhere Beyond, United States"
+    src: require("../../assets/img/events/shantanu_mittal_rasa_chatbot.jpg"),
+    altText: "Shantanu Mittal (DATUM), RASA based Chatbot Building - Mathura",
+    caption: "Shantanu Mittal (DATUM), RASA based Chatbot Building - Mathura"
   },
   {
-    src: require("../../assets/img/bg4.jpg"),
-    altText: "Yellowstone National Park, United States",
-    caption: "Yellowstone National Park, United States"
+    src: require("../../assets/img/events/srihari_pramod_data_visualization.jpg"),
+    altText: "SrihariPramod K, Data Visualization using Tableau - Hyderabad",
+    caption: "SrihariPramod K, Data Visualization using Tableau - Hyderabad"
+  },
+  {
+    src: require("../../assets/img/events/Harin_Joshi_RASA_2.jpg"),
+    altText: "Harin Joshi, RASA based Chatbot Building - Mumbai",
+    caption: "Harin Joshi, RASA based Chatbot Building - Mumbai"
+  },
+  {
+    src: require("../../assets/img/events/akhil_misri_dialogflow.jpg"),
+    altText: "Akhil Misri, Dialogflow Workshop - Bengaluru",
+    caption: "Akhil Misri, Dialogflow Workshop - Bengaluru"
+  },
+  {
+    src: require("../../assets/img/events/akash_verma_rasa_chatbot.jpg"),
+    altText: "Akash Verma, RASA based Chatbot Building - Gurugram",
+    caption: "Akash Verma, RASA based Chatbot Building - Gurugram"
+  },
+  {
+    src: require("../../assets/img/events/sachin_rastogi_feature_engineering.jpg"),
+    altText: "Sachin Rastogi, Feature Engineering - Hyderabad",
+    caption: "Sachin Rastogi, Feature Engineering - Hyderabad"
   }
 ];
 
@@ -56,11 +81,9 @@ function CarouselSection() {
     <>
       <div className="section" id="carousel">
         <Container>
-          <div className="title">
-            <h4>Recent events</h4>
-          </div>
-          <Row className="justify-content-center">
+          <Row className="justify-content-center text-center">
             <Col lg="8" md="12">
+            <h3 className="title">Recent events</h3>
               <Carousel
                 activeIndex={activeIndex}
                 next={next}
@@ -79,7 +102,7 @@ function CarouselSection() {
                       key={item.src}
                     >
                       <img src={item.src} alt={item.altText} />
-                      <div className="carousel-caption d-none d-md-block">
+                      <div className="carousel-caption d-md-block">
                         <h5>{item.caption}</h5>
                       </div>
                     </CarouselItem>
