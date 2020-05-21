@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from 'react-helmet'
 import {
     Container,
     Row,
@@ -20,23 +21,21 @@ function Typeform() {
     });
     return (
       <>
+      <Helmet>
+        <title>CLL - Community Talent Hunt</title>
+      </Helmet>
       <IndexNavbar />
         <div className="section section-about-us">
-                        <Container>
-                            <Row className="justify-content-center text-center">
-                                <Col lg="12" md="12">
-                                    <h3 className="title" style={{marginTop: '15px'}}>Talent Hunt</h3>
-                                </Col>
-                            </Row>
-                            <Row>
+                        <Container fluid={true} style={{paddingRight: '0px', paddingLeft: '0px'}}>
+                            <Row style={{height: '30vh'}}>
                                 <Col className="ml-auto mr-auto text-center" md="12">
                                     <div 
                                         className="typeform-widget"
                                         data-url="https://colearninglounge.typeform.com/to/dYGKfd"
-                                        data-transparency="50"
+                                        data-transparency="0"
                                         data-hide-headers={true}
                                         data-hide-footer={true} 
-                                        style={{width: 100 + '%', height: 500 + 'px'}}>
+                                        style={{width: 100 + '%', height: 91 + 'vh'}}>
                                     </div>
                                 </Col>
                             </Row>
