@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from 'react-helmet'
 
 // core components
 import IndexNavbar from "../components/Navbars/IndexNavbar.js";
@@ -27,6 +28,9 @@ function Index() {
   
   return (
     <>
+    <Helmet>
+        <title>CLL - Homepage</title>
+      </Helmet>
       <IndexNavbar />
       <div className="wrapper">
         <IndexHeader />
