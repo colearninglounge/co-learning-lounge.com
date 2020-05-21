@@ -25,17 +25,17 @@ function Typeform() {
         <title>CLL - Community Talent Hunt</title>
       </Helmet>
       <IndexNavbar />
-        <div className="section section-about-us">
-                        <Container fluid={true} style={{paddingRight: '0px', paddingLeft: '0px'}}>
-                            <Row style={{height: '30vh'}}>
-                                <Col className="ml-auto mr-auto text-center" md="12">
+        <div className="section section-about-us" style={{paddingTop: '5vh', paddingBottom: '0px'}}>
+                        <Container fluid={true}>
+                            <Row>
+                                <Col className="text-center" md="12" style={{paddingRight: '0px', paddingLeft: '0px'}}>
                                     <div 
                                         className="typeform-widget"
                                         data-url="https://colearninglounge.typeform.com/to/dYGKfd"
                                         data-transparency="0"
                                         data-hide-headers={true}
                                         data-hide-footer={true} 
-                                        style={{width: 100 + '%', height: 91 + 'vh'}}>
+                                        style={{width: 100 + '%', height: 95 + 'vh'}}>
                                     </div>
                                 </Col>
                             </Row>
