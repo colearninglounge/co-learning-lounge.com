@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from 'react-helmet'
 
 // core components
 import IndexNavbar from "../components/Navbars/IndexNavbar.js";
@@ -18,6 +19,9 @@ function NotFound() {
   });
   return (
     <>
+    <Helmet>
+        <title>CLL - 404</title>
+      </Helmet>
       <IndexNavbar />
       <section class="page_404">
         <div class="fluid-container">
