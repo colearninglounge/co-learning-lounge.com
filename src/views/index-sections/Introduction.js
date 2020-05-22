@@ -61,7 +61,7 @@ function Introduction() {
                 <div className="text-left team-player">
                   <h4 className="title">Collaborative  Learning</h4>
                   <p className="description">
-                    Platform like Kaggle post real-world problems as competitions. Experts solves, share, and discuss their solution. We prefer to start by learning from problems already solved by experts. Hence interested folks from the community come together and try to solve the problem again by keeping existing solution and discussion as a reference. Once you head to the next level, you can work alongside a mentor to work on unsolved problem statements to gain first hand experience time-critical problems.
+                    Platform like Kaggle post real-world problems as competitions. Experts solve, share, and discuss their solution. We prefer to start by learning from problems already solved by experts. Hence interested folks from the community come together and try to solve the problem again by keeping existing solution and discussion as a reference. Once you head to the next level, you can work alongside a mentor to work on unsolved problem statements to gain first hand experience time-critical problems.
                   </p>
                   <p className="description">
                     <Button className="btn-round bg-info" 

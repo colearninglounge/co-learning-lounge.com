@@ -37,12 +37,9 @@ function IndexHeader() {
               <h1 className="h1-seo anim-typewriter">Learn → Practice → Create → Collaborate → Contribute</h1>
               <h1 className="h1-seo with-out-anim-typewriter">Learn → Practice → Create → Collaborate → Contribute</h1>
               <br></br>
-              <h6 className="category">Designed and developed by{" the commmunity"}</h6>
+              <h6 className="category">Designed and developed by{" the community"}</h6>
             </div>
           </div>
-          {/* <h6 className="category category-absolute">
-            Designed and developed by{" the commmunity"}.
-          </h6> */}
         </Container>
         <div className="separator separator-primary" id="vision"></div>
       </div>
