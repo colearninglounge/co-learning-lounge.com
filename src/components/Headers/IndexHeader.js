@@ -40,9 +40,6 @@ function IndexHeader() {
               <h6 className="category">Designed and developed by{" the community"}</h6>
             </div>
           </div>
-          {/* <h6 className="category category-absolute">
-            Designed and developed by{" the community"}.
-          </h6> */}
         </Container>
         <div className="separator separator-primary" id="vision"></div>
       </div>
